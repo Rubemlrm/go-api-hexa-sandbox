@@ -7,10 +7,10 @@ import (
 	"log/slog"
 
 	_ "github.com/lib/pq"
-	"github.com/rubemlrm/go-api-bootstrap/user"
+	domain "github.com/rubemlrm/go-api-bootstrap/user/domain"
 )
 
-var _ user.Repository = (*PostgresDB)(nil)
+var _ domain.Repository = (*PostgresDB)(nil)
 
 type PostgresDB struct {
 	db     *sql.DB
